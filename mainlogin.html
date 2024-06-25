@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Selection</title>
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .login-container {
+            text-align: center;
+        }
+        .login-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+        .login-icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login Portal</h1>
+        <a href="login.html" class="login-button">
+            <i class="fas fa-user-graduate login-icon"></i>
+            Student/Staff Login
+        </a>
+        <a href="adminlogin.html" class="login-button">
+            <i class="fas fa-user-shield login-icon"></i>
+            Admin Login
+        </a>
+    </div>
+</body>
+</html>

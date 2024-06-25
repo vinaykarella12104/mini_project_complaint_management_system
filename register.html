@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        /* Basic styling for clarity */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .success-message {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .login-link {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>User Registration</h2>
+    <form id="registrationForm" action="/submit-registration-form" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <!-- Success message -->
+    <div id="successMessage" class="success-message" style="display: none;">
+        Registered successfully! You can now <a href="#" id="loginLink" class="login-link">log in</a>.
+    </div>
+
+    <script>
+        // Simulate form submission (for demo purposes)
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Simulate successful registration (replace with actual logic)
+            // For demonstration purposes, we're just showing the success message
+            showSuccessMessage();
+        });
+
+        // Function to show the success message and setup login link
+        function showSuccessMessage() {
+            document.getElementById("registrationForm").style.display = "none"; // Hide the registration form
+            document.getElementById("successMessage").style.display = "block"; // Show the success message
+
+            // Setup click event for login link
+            document.getElementById("loginLink").addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent default action (going to #)
+
+                // Redirect to login page (replace '#' with actual login page URL)
+                window.location.href = "login.html"; // Replace with your login page URL
+            });
+        }
+    </script>
+</body>
+</html>
